@@ -9,9 +9,17 @@ export default {
 
     <div class="header-container">
 
-        <div class="logo-container"><img src="../assets/logo-boolflix.png" alt=""></div>
+        <div class="logo-container">
 
-        <div class="search-container">barra di ricerca</div>
+            <img src="../assets/logo-boolflix.png" alt="">
+
+        </div>
+
+        <div class="search-container">
+
+            <input type="search" placeholder="Cerca un film o una serie tv">
+
+        </div>
 
     </div>
   
@@ -29,12 +37,21 @@ export default {
 
         img{
             width: 100%;
+            padding: 10px;
         }
     }
 
     .search-container{
-        width: 500px;
-        background-color: white;
+        width: 85%;
+        padding-right: 10px;
+        display: flex;
+        align-items: center;
+
+        input{
+            width: 100%;
+            height: 65%;
+            padding-left: 10px;
+        }
     }
 }
 
