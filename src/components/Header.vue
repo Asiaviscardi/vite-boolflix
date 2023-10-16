@@ -9,7 +9,7 @@ export default {
 
     <div class="header-container">
 
-        <div class="logo-container">logo</div>
+        <div class="logo-container"><img src="../assets/logo-boolflix.png" alt=""></div>
 
         <div class="search-container">barra di ricerca</div>
 
@@ -26,7 +26,10 @@ export default {
 
     .logo-container{
         width: 200px;
-        background-color: white;
+
+        img{
+            width: 100%;
+        }
     }
 
     .search-container{
