@@ -19,6 +19,8 @@ export default {
 
             <input type="search" placeholder="Cerca un film o una serie tv">
 
+            <button @click="$emit('startSearch')">click</button>
+
         </div>
 
     </div>

@@ -1,7 +1,6 @@
 <script>
 export default {
     name: 'Main'
-
 }
 </script>
 
@@ -9,15 +8,6 @@ export default {
 
     <div class="card-container">
 
-        <div class="card">card</div>
-        <div class="card">card</div>
-        <div class="card">card</div>
-        <div class="card">card</div>
-        <div class="card">card</div>
-        <div class="card">card</div>
-        <div class="card">card</div>
-        <div class="card">card</div>
-        <div class="card">card</div>
         <div class="card">card</div>
 
     </div>
