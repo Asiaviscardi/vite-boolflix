@@ -1,6 +1,12 @@
 <script>
+import { store } from '../assets/data/store';
 export default {
-    name: 'Header'
+    name: 'Header',
+    data(){
+        return{
+            store
+        }
+    }
 
 }
 </script>
@@ -17,7 +23,15 @@ export default {
 
         <div class="search-container">
 
-            <input type="search" placeholder="Cerca un film o una serie tv">
+            <input @keyup.enter="$emit('startSearch')" v-model.trim="store.apiParams.query" type="search" placeholder="Cerca un film o una serie tv">
+
+            <select name="" id="">
+
+                <option value="all">all</option>
+                <option value="movies">movies</option>
+                <option value="series">tv series</option>
+
+            </select>
 
             <button @click="$emit('startSearch')">click</button>
 
@@ -30,7 +44,6 @@ export default {
 <style scoped lang="scss">
 
 .header-container{
-    background-color: black;
     display: flex;
     justify-content: space-between;
 
@@ -44,7 +57,7 @@ export default {
     }
 
     .search-container{
-        width: 85%;
+        width: 55%;
         padding-right: 10px;
         display: flex;
         align-items: center;

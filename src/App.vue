@@ -11,6 +11,7 @@ export default {
   },
   data(){
     return{
+      store
 
     }
 
@@ -22,11 +23,24 @@ export default {
         params: store.apiParams
       })
       .then(res=>{
-        console.log(res.data)
+        store.all = res.data.results;
       })
       .catch(err=>{
         console.log(err)
+      });
+
+      axios.get(store.apiUrlConsigliati, {
+      params: {
+        api_key: store.apiParams.api_key,
+        language: store.apiParams.language,
+      }
       })
+      .then(res => {
+        store.consigliati = res.data.results;
+      })
+      .catch(err => {
+        console.log(err);
+      });
     }
   },
   mounted(){
@@ -39,10 +53,14 @@ export default {
 
   <Header @startSearch="getApi"/>
 
-  <Main/>
+  <Main v-if="store.all.length>0"/>
   
 </template>
 
-<style scoped lang="scss">
+<style  lang="scss">
+
+body{
+  background-color: black;
+}
 
 </style>
